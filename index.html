@@ -2,11 +2,155 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Гостиница Седона</title>
   </head>
+
   <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+   <header> 
+   		<nav>
+        <a>
+          <img src="https://via.placeholder.com/138x70" alt="Логотип Седона">
+        </a>
+   			<ul>
+   				<li>
+            <a href="#">Информация</a>
+          </li>
+          <li>
+            <a href="#">Фото и видео</a>
+          </li>
+          <li>
+            <a href="#">Карта штата</a>
+          </li>
+          <li>
+            <a href="catalog.html">Гостиницы</a>
+          </li>
+   			</ul>
+   		</nav>
+   </header>
 
+    <main>
+
+      <section>
+        <h1>Добро пожаловать в Седону!</h1>
+        <figure>
+          <img src="https://via.placeholder.com/187x44" alt="WELCOME"> 
+          <img src="https://via.placeholder.com/225x28" alt="to the georgeos">
+          <img src="https://via.placeholder.com/456x213" alt="SEDONA">
+        </figure>
+        <p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+      </section>
+
+      <section>
+        <h2>Преимущества</h2>
+        <p>Рассмотрим 5 причин по которым Седона круче, чем Гранд каньон!</p>
+          <ul>
+            <li>
+              <h3>Настоящий городок</h3>
+              <p>- №1 -</p>
+              <p>Седона - не атракцион для туристов, там течет своя жизнь</p>
+              <img src="https://via.placeholder.com/800x256" alt="Фото городка Седона">
+            </li>
+          </ul>
+
+          <section>
+            <h2>Рекомендации</h2>
+              <ul>
+                <li>
+                  <h3>Жилье</h3>
+                  <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                </li>
+                <li>
+                  <h3>Еда</h3>
+                  <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                </li>
+                <li>
+                  <h3>Сувениры</h3>
+                  <p>Не только китайского, но и местного прооизводства!</p>
+                </li>
+              </ul>
+          </section>
+
+          <ul>
+            <li>
+              <img src="https://via.placeholder.com/800x256" alt="Фото моста дьявола">
+              <h3>Там есть мост дьявола</h3>
+              <p>- №2 -</p>
+              <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </li>
+            <li>
+              <h3>Небольшая площадь</h3>
+              <p>- №3 -</p>
+              <p>Все достопримечательности находятся очень близко</p>
+            </li>
+            <li>
+              <h3>Красивая дорога</h3>
+              <p>- №4 -</p>
+              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </li>
+            <li>
+              <h3>Мало туристов</h3>
+              <p>- №5 -</p>
+              <p>Большинство едет в Гранд каньон и толпится там</p>
+            </li>
+          </ul>
+      </section>
+
+      <section>
+        <h2>Поиск в гостинице в Седоне</h2>
+        <p>Заинтересовались?</p>
+        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <form action="catalog.html" method="get">
+          <button type="button">Поиск гостиницы в Седоне</button>
+            
+              <label for="arrival">Дата заезда</label> 
+              <input id="arrival" type="text" name="date_of_arrival" placeholder="24 апреля 2017">
+              <img src="https://via.placeholder.com/21x22" alt="">
+            
+              <label for="departure">Дата выезда</label> 
+              <input id="departure" type="text" name="date_of_departure" placeholder="4 июля 2017">
+              <img src="https://via.placeholder.com/21x22" alt="">
+            
+              <label for="adults">Взрослые:</label>
+              <input id="adults" type="number" step="1" min="1" placeholder="2">
+            
+            
+              <label for="children">Дети:<label>
+              <input id="children" type="number" step="1" min="1" placeholder="0">
+            
+              <input type="submit" value="Найти">
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      
+      <h2>Как нас найти?</h2>
+      <p>#VISITSEDONA <br> 
+      Тел: +7 (495) 666-01-66 </p>
+      
+      <section>
+        <h2>Социальные сети</h2>
+        <ul>
+          <li>
+            <a href="#">Twitter</a>
+          </li>
+          <li>
+            <a href="#">Facebook</a>
+          </li>
+          <li>
+            <a href="#">YouTube</a>
+          </li>
+        </ul>
+      </section>
+
+      <p>WEBSITE BY</p>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="https://via.placeholder.com/115x41" alt="Логотип htmlacademy">
+        </a>
+
+    </footer>
+   
   </body>
+
 </html>
