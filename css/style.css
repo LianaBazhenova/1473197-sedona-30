@@ -1,9 +1,14 @@
-  /* Variables */
+/* index.html */
+
+/* Обнуление стилей по умолчанию */
 
 *{
   margin: 0;
   padding: 0;
 }
+
+
+/* Variables */
 
 :root {
   /* texts */
@@ -33,9 +38,19 @@
   --basic-brown-neutral: #604E43;
   --basic-brown-dark: #503E33;
 
+  /* opaciti */
+  --text-opaciti: rgba(0,0,0,0.3);
+  --button-opaciti: rgba(255,255,255,0.3);
 
   /* border-focus */
   --basic-border-focus: #E5E5E5;
+}
+
+
+ /* body */
+ .page_body h1,
+ .page_body h2 {
+  visibility: hidden;
 }
 
 .page_body {
@@ -56,13 +71,11 @@
 .main_navigation  {
   line-height: 26px;
   font-weight: 700;
-  
 }
 
 .main_navigation a {
   text-decoration: none;
   color: var(--basic-black);
- 
 }
 
 .site_navigation {
@@ -80,12 +93,11 @@
 /* класс для пункта навигации, 
 если находимся на странице */
 
-.activ {
+.activ:not([href]) {
   color: var(--basic-brown);
 }
 
 /* section: first_screen  */
-
 
 .first_screen figure {
   background-image: url("../img/background_photo.jpg");
@@ -105,7 +117,6 @@
   margin-right: auto;
   max-width: 100%;
   height: auto;
-
 }
 
 .first_screen p {
@@ -179,6 +190,7 @@
 .button_primary:active {
   background-color: var(--basic-brown-dark);
   outline: none;
+  color: var(--button-opaciti);
 }
 
 .search_form .search_item {
@@ -213,6 +225,7 @@
 
 .button_secondary:active {
   background-color: var(--basic-blue-dark);
+  color: var(--button-opaciti);
 }
 
 
@@ -246,7 +259,6 @@
   width: 46px;
   height: 48px;
 }
-
 
 .social_item {
   background-color: var(--basic-blue);
@@ -282,6 +294,156 @@
 
 
 
+/* catalog.html */
+
+.filter_hotel {
+  background: url("../img/background_photo.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  /*filter: blur(5px);*/
+}
+
+.selection_form legend {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--basic-white);
+}
+
+.filter_hotel li {
+  list-style: none;
+  color: var(--basic-white);
+}
+
+.fieldset_range p {
+  color: var(--basic-white);
+
+}
+ .fieldset_item {
+  color: var(--basic-white);
+  outline:none;
+  background: transparent;
+  border: none;
+ }
+
+.button_show {
+  color: var(--basic-white);
+  outline: none; 
+  background: transparent;
+  text-transform: uppercase;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  padding: 8px 35px;
+  cursor: pointer;
+}
+
+/* Сортировка:  */
+
+.hotel_sorting p,
+.hotel_name {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.hotel_sorting legend {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.hotel_sorting li {
+  list-style: none;
+}
+
+.hotel_item  {
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--basic-blue);
+  color: var(--text-opaciti);
+}
+
+.hotel_item_active {
+  color: var(--basic-blue);
+  border-bottom: none;
+}
+
+.hotel_item:hover {
+  border-bottom: 1px dotted var(--basic-blue);
+  color: var(--basic-blue);
+}
+
+.hotel_item:active {
+  color: var(--basic-black);
+  border-bottom: none;
+}
+
+.triangle, 
+.hotel_name,
+.button_sorting_book {
+  text-decoration: none;
+}
+
+.triangle:hover path,
+.triangle:hover path {
+  fill: var(--basic-black);
+}
+
+.triangle:active path,
+.triangle:active path  {
+  fill: var(--basic-blue);
+}
+
+.hotel_name {
+  color: var(--basic-black);
+}
+
+.hotel_name:hover {
+  color: var( --basic-blue);
+}
+
+.hotel_name:active {
+  color: var(--text-opaciti);
+}
 
 
+.hotel_list p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+/* Кнопки подробнее и забронировать  */
+
+.button_sorting_more,
+.button_sorting_book {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.button_sorting_more:hover {
+  background-color: var(--basic-blue-neutral)
+}
+
+.button_sorting_more:active {
+  color: var(--button-opaciti);
+  background-color: var(--basic-blue-dark);
+}
+
+.button_sorting_book:hover {
+  background-color: var(--basic-brown-neutral);
+}
+
+.button_sorting_book:active {
+  background-color: var(--basic-brown-dark);
+  color: var(--button-opaciti);
+}
+
+.rating {
+  color: var( --basic-dark-neutral);
+  background-color: var(--basic-light);
+  width: 110px;
+  height: 27px;
+  text-align: center;
+  vertical-align: middle;
+}
 
