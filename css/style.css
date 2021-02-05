@@ -1,6 +1,6 @@
-/* index.html */
 
-/* Обнуление стилей по умолчанию */
+
+/* Resetting default styles */
 
 *{
   margin: 0;
@@ -89,9 +89,6 @@
 .site_navigation a:active {
   opacity: 0.3;
 }
-
-/* класс для пункта навигации, 
-если находимся на странице */
 
 .activ:not([href]) {
   color: var(--basic-brown);
@@ -271,6 +268,10 @@
   margin-top: 14px;
 }
 
+.social_icon {
+  fill: var(--basic-white);
+}
+
 .social_item:hover {
  background-color: var(--basic-blue-neutral);
 }
@@ -284,11 +285,16 @@
   line-height: 26px;
 }
 
-.copyright_button svg:hover path {
+.copyright_icon {
+  fill: var(--basic-dark-academy);
+}
+
+.copyright_icon:hover {
   fill: var(--basic-blue);
 }
 
-.copyright_button svg:active path {
+
+.copyright_icon:active {
   fill: var(--basic-neutral-academy);
 }
 
@@ -297,10 +303,23 @@
 /* catalog.html */
 
 .filter_hotel {
+  position: relative;
+  width: 1200px;
+  height: 217px;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.filter_hotel_img {
   background: url("../img/background_photo.jpg");
   background-repeat: no-repeat;
+  position: absolute;
+  filter: blur(5px);
   width: 100%;
-  /*filter: blur(5px);*/
+  height: 100%; 
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .selection_form legend {
@@ -325,6 +344,12 @@
   border: none;
  }
 
+ input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .button_show {
   color: var(--basic-white);
   outline: none; 
@@ -336,7 +361,7 @@
   cursor: pointer;
 }
 
-/* Сортировка:  */
+/* sorting:  */
 
 .hotel_sorting p,
 .hotel_name {
@@ -353,6 +378,12 @@
 .hotel_sorting li {
   list-style: none;
 }
+
+/*  Then remove as I will align the blurry picture  */
+.hotel_sorting {
+  margin-top: 160px;
+}
+/* --- */
 
 .hotel_item  {
   font-size: 12px;
@@ -412,13 +443,16 @@
   font-weight: 400;
 }
 
-/* Кнопки подробнее и забронировать  */
+/* More and book buttons */
 
 .button_sorting_more,
 .button_sorting_book {
   font-size: 14px;
   line-height: 21px;
+  padding-left: 17px;
+  padding-right: 16px;
 }
+
 
 .button_sorting_more:hover {
   background-color: var(--basic-blue-neutral)
@@ -446,4 +480,19 @@
   text-align: center;
   vertical-align: middle;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
