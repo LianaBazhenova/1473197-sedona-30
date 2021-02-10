@@ -44,8 +44,6 @@
   --basic-border-focus: #E5E5E5;
 }
 
-
- 
  .page_body h1,
  .page_body h2 {
   display: none;
@@ -97,7 +95,7 @@
 }
 
 .site_navigation {
-   list-style: none;
+  list-style: none;
 }
 
 .site_navigation a:hover {
@@ -127,8 +125,7 @@
 }
 
 .main_navigation_wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: block;
   width: 1200px;
   margin: 0 auto;
 }
@@ -149,10 +146,8 @@
 }
 
 .first_screen .first_screen_title {
-  display: grid;
-  justify-self: center;
-  margin-left: auto;
-  margin-right: auto;
+  display: block;
+  margin: 0 auto;
   max-width: 100%;
   height: auto;
 }
@@ -177,14 +172,18 @@
   line-height: 26px;
 }
 
-.features_item_img_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.features_item h3 {
+  font-size: 21px;
+  font-weight: 700;
 }
 
-.features_container p:nth-of-type(1) {
-  padding-top: 25px;
-  padding-bottom: 23px;
+.features_item_img_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.feature_number {
+  padding: 25px 0; 
 }
 
 .features_container h3 {
@@ -192,38 +191,29 @@
 }
 
 .features_cause {
-  margin-top: 42px;
-  margin-bottom: 51px;
+  margin: 42px 0 51px;
 }
 
 .features_list_img, 
-.features_list_row {
+.features_list_row,
+.features_list_row_background {
   list-style: none;
+  text-align: center;
 }
 
 .features_list_row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding-top: 60px;
-  padding-bottom: 82px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 60px 0 82px;
 }
 
-.features_list_row li,
-.features_list_img li {
-  text-align: center;
+.features_list_row_background {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.features_list_row img {
-  padding-bottom: 28px;
-}
-
-.features_list_row h3 {
-  padding-bottom: 25px;
-}
-
-.features_item h3 {
-  font-size: 21px;
-  font-weight: 700;
+.features_list_row .features_list_title {
+  margin: 28px 0 25px;
 }
 
 .features_item_img {
@@ -231,15 +221,10 @@
   color: var(--basic-white);
 }
 
-.features ul:nth-last-child(1) {
+.features .features_item_last {
   background-color: var(--basic-light-neutral-background);
-  padding-top: 47px;
-  padding-bottom: 54px;
+  padding: 47px 0 54px;
 }
-
-.features_item_last p:nth-of-type(1) {
-  padding-bottom: 23px;
-} 
 
 /* search */
 
@@ -248,10 +233,6 @@
   line-height: 24px;
   font-weight: 700;
   text-align: center;
-}
-
-.search {
-  margin: 100px;  /*  для гаглядности формы */
 }
 
 .interest {
@@ -270,11 +251,8 @@
   display: flex;
   width: 435px;
   height: 95px;
-  margin-top: 4px;
-  margin-bottom: 24px;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 4px auto 24px;
 }
 
 /* button */
@@ -328,7 +306,6 @@
 .search_container {
   display: grid;
   width: 458px;
-  margin: auto;
   margin: 55px;
 }
 
@@ -363,10 +340,8 @@
 
 .button_secondary {
   background-color: var(--basic-blue);
-  padding: 16px 182px; 
-  margin-left: 55px;
-  margin-right: 55px;
-  margin-bottom: 55px;
+  padding: 16px 196px; 
+  margin: 0 55px 55px;
 }
 
 .button_secondary:hover {
@@ -390,7 +365,8 @@
 }
 .main_footer .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
 }
 
 .footer_contacts p, 
@@ -426,7 +402,7 @@
 }
 
 .social_item svg {
-  margin-top: 14px;
+  margin-top: 14px;  /* потом на флексах сделаю */
 }
 
 .social_icon {
@@ -444,9 +420,8 @@
 
 .footer_copyright {
   line-height: 26px;
-    max-width: 150px;
+  max-width: 150px;
   margin: 0;
-  justify-self: end;
 }
 
 .copyright_icon {
@@ -457,12 +432,9 @@
   fill: var(--basic-blue);
 }
 
-
 .copyright_icon:active {
   fill: var(--basic-neutral-academy);
 }
-
-
 
 /* catalog.html */
 
@@ -471,7 +443,11 @@
   width: 1200px;
   height: 217px;
   box-sizing: border-box;
-  padding: 0;
+}
+
+.filter_hotel_form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .filter_hotel_img {
@@ -486,16 +462,14 @@
   z-index: -1;
 }
 
-.selection_form legend {
+.filter_hotel_form legend {
   font-size: 16px;
   font-weight: 700;
   color: var(--basic-white);
 }
 
-
-.selection_form fieldset {
+.filter_hotel_form fieldset {
   border: none;
-
 }
 
 .filter_hotel li {
@@ -509,7 +483,7 @@
 }
  .fieldset_item {
   color: var(--basic-white);
-  outline:none;
+  outline: none;
   background: transparent;
   border: none;
  }
@@ -610,7 +584,6 @@
 .hotel_name:active {
   color: var(--text-opaciti);
 }
-
 
 .hotel_list p {
   font-size: 14px;
