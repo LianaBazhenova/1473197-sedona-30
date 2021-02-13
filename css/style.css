@@ -61,7 +61,8 @@
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-white);
-
+  
+  height: 100%;
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -362,6 +363,7 @@
 .main_footer {
   background-color: var(--basic-white);
   opacity: 0.9;
+  padding-top: 36px;
 }
 .main_footer .container {
   display: grid;
@@ -381,7 +383,8 @@
   color: inherit;	
 }
 
-.footer_social {
+.footer_social,
+.footer_copyright {
   justify-self: center;
 }
 
@@ -436,21 +439,43 @@
   fill: var(--basic-neutral-academy);
 }
 
+
+
 /* catalog.html */
 
 .filter_hotel {
-  position: relative;
+  /* position: relative; */
   width: 1200px;
   height: 217px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
+  background-image: url("../img/background_blur.jpg");
 }
 
 .filter_hotel_form {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 72px;
 }
 
-.filter_hotel_img {
+.filter_hotel_item{
+  display: flex;
+}
+
+.infrastructure {
+  padding-right: 119px;
+}
+
+.filter_hotel_cost {
+  width: 317px;
+  justify-self: end;
+}
+
+.filter_hotel_infrastructure,
+.filter_hotel_infrastructure {
+  width: 135px;
+}
+
+/* .filter_hotel_img {
   background: url("../img/background_photo.jpg");
   background-repeat: no-repeat;
   position: absolute;
@@ -460,16 +485,20 @@
   top: 0;
   left: 0;
   z-index: -1;
-}
+} */
 
-.filter_hotel_form legend {
+.filter_hotel_form p {
   font-size: 16px;
   font-weight: 700;
   color: var(--basic-white);
 }
 
-.filter_hotel_form fieldset {
-  border: none;
+.filter_hotel_list li {
+  margin-top: 24px;
+}
+
+.filter_hotel_container {
+  margin-top: 27px;
 }
 
 .filter_hotel li {
@@ -479,13 +508,28 @@
 
 .fieldset_range p {
   color: var(--basic-white);
-
 }
+
  .fieldset_item {
   color: var(--basic-white);
   outline: none;
   background: transparent;
   border: none;
+  width: 50px;
+  padding: 2px;
+ }
+
+ .filter_hotel_cost_border {
+  border: 2px solid var(--basic-white);
+  display: flex;
+  height: 36px;
+  margin: 20px 0;
+ }
+
+ .filter_hotel_cost .filter_hotel_input {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
  }
 
  input::-webkit-outer-spin-button,
@@ -514,25 +558,19 @@
   font-weight: 700;
 }
 
+
+.hotel_list_container_col2 span{
+  margin-right: 33px;
+}
+
 .hotel_sorting legend {
   font-size: 12px;
   line-height: 18px;
 }
 
-.hotel_sorting fieldset {
-  border: none;
-}
-
-
 .hotel_sorting li {
   list-style: none;
 }
-
-/*  Then remove as I will align the blurry picture  */
-.hotel_sorting {
-  margin-top: 160px;
-}
-/* --- */
 
 .hotel_item  {
   font-size: 12px;
@@ -591,14 +629,42 @@
   font-weight: 400;
 }
 
+.hotel_list .hotel_list_item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+ .hotel_list_container {
+  display: flex;
+  margin-top: 61px;
+ }
+
+ .hotel_list_container figure {
+  margin: 0 30px 0 72px;
+  
+ }
+
 /* More and book buttons */
 
-.button_sorting_more,
-.button_sorting_book {
+.button_sorting_more {
   font-size: 14px;
   line-height: 21px;
-  padding-left: 17px;
-  padding-right: 16px;
+  height: 27px;
+  padding: 0 17px;
+}
+
+ .hotel_list_container_col2 p {
+  margin: 8px 0 15px;
+ }
+
+ .hotel_list_container_col2 h3 {
+  margin-top: -5px;
+ }
+
+.hotel_list_container_col2 .button_sorting_book {
+  font-size: 14px;
+  line-height: 21px;
+  padding: 4px 17px 5px; 
 }
 
 .button_sorting_more {
@@ -630,17 +696,24 @@
 .rating {
   color: var( --basic-dark-neutral);
   background-color: var(--basic-light);
-  width: 110px;
-  height: 27px;
-  text-align: center;
-  vertical-align: middle;
+  padding: 3px 12px 3px 15px;
 }
 
+.rating_stars .stars { 
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 6px;
+  margin-bottom: 47px;
+  
+ }
 
 
-
-
-
+.rating_stars  {
+   margin-top: 61px;
+   width: 110px;
+   justify-self: end;
+   margin-right: 73px;
+ }
 
 
 
