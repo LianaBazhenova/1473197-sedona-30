@@ -454,7 +454,6 @@
 .filter_hotel_form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0 72px;
 }
 
 .filter_hotel_item{
@@ -559,9 +558,15 @@
 }
 
 
-.hotel_list_container_col2 span{
-  margin-right: 33px;
+.catalog_container {
+  padding-left: 72px;
+  padding-right: 72px;
 }
+
+
+/*.hotel_list_container_col2 span{
+  margin-right: 33px;
+}*/
 
 .hotel_sorting legend {
   font-size: 12px;
@@ -631,18 +636,35 @@
 
 .hotel_list .hotel_list_item {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr auto;
 }
 
  .hotel_list_container {
-  display: flex;
+/*  display: flex;*/
   margin-top: 61px;
  }
 
  .hotel_list_container figure {
-  margin: 0 30px 0 72px;
-  
+  margin-right: 30px ;
  }
+
+ .figure_img {
+  grid-row: 1/4;
+  grid-column: 1/2;
+ }
+
+
+ .hotel_list_container {
+  display: grid;
+  grid-template-columns: 159px 142px 142px 1fr;
+  grid-template-rows: 1fr auto 27px;
+  grid-column-gap: 6px;
+ }
+
+.hotel_list_container span{
+  margin: 8px 0;
+}
+
 
 /* More and book buttons */
 
@@ -653,26 +675,41 @@
   padding: 0 17px;
 }
 
- .hotel_list_container_col2 p {
-  margin: 8px 0 15px;
+ /*.hotel_list_container_col2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+ }*/
+
+
+
+
+ .hotel_name {
+  grid-column: 2/-1;
+  grid-row: 1/2;
  }
+
+  /*.hotel_list_container_col2 p {
+  margin: 8px 0 15px;
+ } */
 
  .hotel_list_container_col2 h3 {
-  margin-top: -5px;
+ /*margin-top: -5px;*/
  }
 
-.hotel_list_container_col2 .button_sorting_book {
-  font-size: 14px;
-  line-height: 21px;
-  padding: 4px 17px 5px; 
-}
 
 .button_sorting_more {
   background-color: var(--basic-blue);
+  grid-row: 3/4;
+  grid-column: 2/3;
 }
 
 .button_sorting_book {
   background-color: var(--basic-brown);
+  font-size: 14px;
+  line-height: 21px;
+  padding: 4px 17px 5px; 
+  grid-row: 3/4;
+  grid-column: 3/4;
 }
 
 .button_sorting_more:hover {
@@ -704,15 +741,14 @@
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 6px;
   margin-bottom: 47px;
+  transform: scale(-1, 1);
   
  }
 
-
 .rating_stars  {
-   margin-top: 61px;
-   width: 110px;
-   justify-self: end;
-   margin-right: 73px;
+  margin-top: 61px;
+  width: 110px;
+  justify-self: end;
  }
 
 
