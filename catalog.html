@@ -47,8 +47,8 @@
       
       <form class="filter_hotel_form catalog_container" action="https://echo.htmlacademy.ru/" method="get">
         <div class="filter_hotel_container filter_hotel_item">
-          <div class="infrastructure">
-            <p>Инфраструктура:</p>
+          <fieldset class="infrastructure">
+            <legend>Инфраструктура:</legend>
             <ul class="filter_hotel_list">
               <li> 
                   <input class="selection_item" type="checkbox" name="swimming" id="filter_swimming" checked> 
@@ -63,10 +63,10 @@
                 <label for="filter_WI_FI">WI-FI</label>
               </li>
             </ul>
-          </div>
+          </fieldset>
 
-          <div class="type_of_housing">
-            <p>Тип жилья:</p>
+          <fieldset class="type_of_housing">
+            <legend>Тип жилья:</legend>
             <ul class="filter_hotel_list">
               <li>
                 <input class="selection_item" type="checkbox" name="hotel" id="filter_hotel" checked>
@@ -81,7 +81,7 @@
                 <label for="filter_apartments">Апартаменты</label>
               </li>
             </ul>
-          </div> 
+          </fieldset> 
         </div>
 
         <div class="filter_hotel_container filter_hotel_cost">
@@ -103,25 +103,29 @@
 
     <section class="hotel_sorting">
       <h2>Список гостиниц</h2>
-      <p>Найдено:<span>3</span></p>
-      <fieldset class="hotel_sorting_fieldset">
-        <legend>Сортировка:</legend>
+      <div class="hotel_sorting_fieldset catalog_container">
+        <p>Найдено:<span>3</span></p>
+      
+        <p class="sorting">Сортировка:</p>
         <ul>
+          
           <li><a class="hotel_item hotel_item_active" href="#">По цене</a></li>
           <li><a class="hotel_item" href="#">По типу</a></li>
           <li><a class="hotel_item" href="#">По рейтингу</a></li>
         </ul>
-        <a class="triangle" href="#">
-          <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.5 0L0 10H11L5.5 0Z" fill="var(--basic-rest-triangle)"/>
-          </svg>
-        </a>
-        <a class="triangle" href="#">
-          <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.5 10L0 0H11" fill="var(--basic-blue)"/>
-          </svg>
-        </a>
-      </fieldset>
+        <div>
+          <a class="triangle" href="#">
+            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 0L0 10H11L5.5 0Z" fill="var(--basic-rest-triangle)"/>
+            </svg>
+          </a>
+          <a class="triangle" href="#">
+            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 10L0 0H11" fill="var(--basic-blue)"/>
+            </svg>
+          </a>
+        </div>
+      </div>
 
       <ul class="hotel_list catalog_container">
         <li class="hotel_list_item">
