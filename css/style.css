@@ -90,11 +90,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .main_navigation a {
   text-decoration: none;
   color: var(--basic-black);
+ 
 }
 
 .main_navigation_wrapper {
@@ -145,6 +147,9 @@
   width: 138px;
   height: 70px;
   position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
 
 }
@@ -328,6 +333,19 @@
   margin: 55px;
 }
 
+.search_item {
+  display: flex;
+  align-items: center;
+}
+
+.search_item_margin {
+  margin-bottom: 30px;
+}
+
+.search_item label {
+  margin-right: 9px;  /* потом поменяю когда форму буду доделывать */
+}
+
 .search_item input {
   background-color: var(--basic-light);
   border: 2px solid var(--basic-light);
@@ -339,8 +357,7 @@
 
 .search_item .arrival_date,
 .search_item .departure_date {
-  width: 250px;  
-  margin-bottom: 29px; 
+  width: 314px;  /* потом поменяю когда форму буду доделывать */
 }
 
 .search_item .adults,
@@ -413,11 +430,6 @@
   list-style: none;
 }
 
-/*.footer_social li {
-  width: 46px;
-  height: 48px;
-}*/
-
 .social_item {
   background-color: var(--basic-blue);
   width: 46px;
@@ -429,9 +441,11 @@
 }
 
 .social_button_list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 6px;
+  display: flex;
+}
+
+.social_button_list li {
+  margin-right: 6px;
 }
 
 .social_icon {
@@ -454,7 +468,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
- /* margin-right: 80px; */
 }
 
 .footer_copyright a {
@@ -626,12 +639,8 @@
   list-style: none;
 }
 
-.hotel_sorting_list li:first-child {
+.hotel_sorting_list li {
   margin-right: 32px;
-}
-
-.hotel_sorting_list li:last-child {
-  margin: 0 0 0 33px;
 }
 
 .hotel_item  {
@@ -703,9 +712,7 @@
 }
 
  .hotel_list_container {
-/*  display: flex;*/
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px 0 30px;
  }
 
  .hotel_list_container figure {
@@ -716,7 +723,6 @@
   grid-row: 1/4;
   grid-column: 1/2;
  }
-
 
  .hotel_list_container {
   display: grid;
@@ -729,14 +735,13 @@
   margin: 8px 0;
 }
 
-
 /* More and book buttons */
 
 .button_sorting_more {
   font-size: 14px;
   line-height: 21px;
   height: 27px;
-  padding: 3px 17px 3px; 
+  padding: 3px 17px; 
 }
 
  .hotel_name {
