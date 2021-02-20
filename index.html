@@ -133,33 +133,38 @@
             <button class="button button_primary" type="button">Поиск гостиницы в Седоне</button>
             
               <div class="search_container">
-                <div class="search_item search_item_margin">
+                <!-- <div class="search_item search_item_margin"> -->
                   <label for="arrival">Дата заезда:</label> 
-                  <div class="search_item_container">
-                    <input class="arrival_date" id="arrival" type="text" name="date_of_arrival" value="24 апреля 2017" placeholder="Введите дату заезда">
+                  <div class="search_item_container search_item_container_row_1">
+                    <input class="input_date" id="arrival" type="text" name="date_of_arrival" value="24 апреля 2017" placeholder="Введите дату заезда">
                     <img src="img/icons/calendar.svg" alt=" ">
-                  </div>
-                </div>
-                <div class="search_item search_item_margin">
+                  </div> 
+                <!-- </div> -->
+                <!-- <div class="search_item search_item_margin"> -->
                   <label for="departure">Дата выезда:</label> 
-                  <div class="search_item_container">
-                    <input class="departure_date" id="departure" type="text" name="date_of_departure" value="4 июля 2017" placeholder="Введите дату выезда">
+                  <div class="search_item_container search_item_container_row_2">
+                    <input class="input_date" id="departure" type="text" name="date_of_departure" value="4 июля 2017" placeholder="Введите дату выезда">
                     <img src="img/icons/calendar.svg" alt=" ">
-                    </div> 
-                </div>
+                  </div> 
+                <!-- </div> -->
               
-                <div class="search_item">
-                  <label for="adults">Взрослые:</label>
-                 <!--  <div>
-                       <button></button> -->
-                    <input class="adults" id="adults" type="number" step="1" min="1" placeholder="2">
-                 <!-- <button></button>
-                  </div> -->
-                  <label for="children">Дети:</label>
-                  <input class="children" id="children" type="number" step="1" min="1" placeholder="0">
-                </div>
+                <!--  <div class="search_item"> -->
+                  <label class="adults" for="adults">Взрослые:</label>
+                  <div class="container_adults">
+                    <button class="button_quantity">-</button> 
+                    <input class="input_quantity" id="adults" type="number" step="1" min="1" placeholder="2">
+                    <button class="button_quantity">+</button>
+                  </div> 
+                  <label class="children" for="children">Дети:</label>
+                  <div class="container_children">
+                    <button class="button_quantity">-</button> 
+                    <input class="input_quantity" id="children" type="number" step="1" min="1" placeholder="0">
+                    <button class="button_quantity">+</button>
+                  </div> 
+                <!-- </div> -->
+             
+                  <button class="button button_secondary" type="submit">Найти</button>
               </div>
-            <button class="button button_secondary" type="submit">Найти</button>
           </form>
         </section>
         <!-- Заканчивается форма поиска -->

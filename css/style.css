@@ -367,7 +367,7 @@
 
 /* search_form */
 
-.search_form .search_item {
+.search_form .search_container {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
@@ -379,64 +379,129 @@
   margin-right: auto;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
   height: 481px;  /*  кнопка не внутри формы? */
-
 }
 
 .search_container {
   display: grid;
+  grid-template-columns:  112px 114px 1fr 114px;
+  grid-template-rows: 38px 38px 38px 58px;
   width: 458px;
   margin: 55px;
+  align-items: center;
+  grid-row-gap: 30px;
+  justify-self: center;
 }
 
-.search_item {
+.search_item_container_row_1 {
+  grid-column: 2/-1;
+  grid-row: 1/2;
+}
+
+.search_item_container_row_2 {
+  grid-column: 2/-1;
+  grid-row: 2/3;
+}
+
+.adults {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.container_adults {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: flex;
+}
+
+.children {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  padding-left: 53px;
+}
+
+.container_children {
+  grid-column: 4/-1;
+  grid-row: 3/4;
+  display: flex;
+}
+
+.search_item_container {
+  display: flex;
+
+}
+
+ /*input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+
+/*.search_item {
   display: flex;
   align-items: center;
 }
 
 .search_item_margin {
   margin-bottom: 30px;
+}*/
+
+.search_container .button_secondary {
+  grid-column: 1/-1;
+  grid-row: 4/-1;
+  margin-top: 48px;
 }
 
 .search_item label {
   margin-right: 9px;  /* потом поменяю когда форму буду доделывать */
-  display: block;
+/* display: block;*/
 }
 
-.search_item input {
+.search_container input {
   background-color: var(--basic-light);
-  border: 2px solid var(--basic-light);
   outline: none;
   font: inherit;
   text-transform: uppercase;
   height: 38px;
+  
+}
+
+.input_date {
+  width: 307px;  
+  border: 2px solid var(--basic-light);
+  font: inherit;
   padding-left: 15px;
 }
 
-.search_item .arrival_date,
-.search_item .departure_date {
-  width: 310px;  /* потом поменяю когда форму буду доделывать */
+.input_quantity {
+  width: 38px; 
+  border: none;
+  color: var( --basic-black);
+  text-align: center;
 }
 
-.search_item .adults,
-.search_item .children {
-  width: 114px; 
-}
-
-.search_item input:focus {
+.input_date:focus {
   border: 2px solid var(--basic-border-focus);
   background-color: var(--basic-white);
 }
 
-.search_item input:hover {
+.input_date:hover {
   background-color: var(--basic-light-neutral);
   border: 2px solid var(--basic-light-neutral);
+}
+
+.button_quantity {
+  border: none;
+  width: 38px;
+  height: 38px;
+  background-color: var(--basic-light);
+
 }
 
 .button_secondary {
   background-color: var(--basic-blue);
   padding: 16px 196px; 
-  margin: 0 55px 55px;
 }
+  
 
 .button_secondary:hover {
   background-color: var(--basic-blue-neutral);
