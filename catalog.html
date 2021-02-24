@@ -70,36 +70,47 @@
                 <legend>Тип жилья:</legend>
                 <ul class="filter_hotel_list">
                   <li>
-                    <input class="selection_item" type="checkbox" name="hotel" id="filter_hotel" checked>
+                    <input class="selection_item visually-hidden" type="checkbox" name="hotel" id="filter_hotel" checked>
                     <label for="filter_hotel">Гостиница</label>
                   </li>
                   <li>
-                    <input class="selection_item" type="checkbox" name="motel" id="filter_motel" checked>
+                    <input class="selection_item visually-hidden" type="checkbox" name="motel" id="filter_motel" checked>
                     <label for="filter_motel">Мотель</label>
                   </li>
                   <li>
-                    <input class="selection_item" type="checkbox" name="apartments" id="filter_apartments" checked>
+                    <input class="selection_item visually-hidden" type="checkbox" name="apartments" id="filter_apartments" checked>
                     <label for="filter_apartments">Апартаменты</label>
                   </li>
                 </ul>
               </fieldset> 
             </div>
 
-            <div class="filter_hotel_container filter_hotel_cost">
-              <p>Стоимость в сутки(р):</p>
-              <div class="filter_hotel_cost_border">
-                <div>
-                  <p class="filter_hotel_input">От </p>
-                  <input class="fieldset_item" type="number" value="0" min="0" step="1">
+            <fieldset class="filter_hotel_container filter_hotel_cost">
+              <legend>Стоимость в сутки (р):</legend>
+        
+                <div class="range_filter">
+                  <div class="price_controls">
+                    <label class="min_price">
+                    от <input type="number" name="min_price" value="0">
+                    </label>
+                    <label class="max_price">
+                    до <input type="number" name="max_price" value="3000">
+                    </label>
+                  </div>
+                  <div class="range_controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle_min" tabindex="0"></div>
+                    <div class="toggle toggle_max" tabindex="0"></div>
+                  </div>
+
                 </div>
-                <div>
-                  <p class="filter_hotel_input">До </p> 
-                  <input class="fieldset_item" type="number" value="3000" min="1" step="1">
-                </div>
-              </div>
-              <input class="input_range" type="range" name="cost" min="0" step="1">
+                
+
               <button class="button_show" type="submit">Показать</button>
-            </div>
+
+             </fieldset> 
 
           </form>
         </section>
@@ -107,7 +118,7 @@
           <h2 class="visually-hidden">Список гостиниц</h2>
           <div class="hotel_sorting_fieldset catalog_container">
             <div class="hotel_sorting_container">
-              <p>Найдено:<span>3</span></p>
+              <p>Найдено:<span> 3</span></p>
               <p class="sorting">Сортировка:</p>
               <ul class="hotel_sorting_list">      
                 <li><a class="hotel_item hotel_item_active" href="#">По цене</a></li>
@@ -137,7 +148,7 @@
                 </figure>
                 <a class="hotel_name" href="#"><h3>Amara resort &amp; SPA</h3></a>
                 <span>Гостиница</span> 
-                <span>от 4000р.</span>    
+                <span>от 4000 р.</span>    
                 <button class="button button_sorting_more" type="button">Подробнее</button>
                 <a class="button button_sorting_book" href="#">Забронировать</a>
               </div> 
@@ -148,7 +159,7 @@
                   <img src="img/icons/star.svg" alt="Звезда рейтинга">
                   <img src="img/icons/star.svg" alt="Звезда рейтинга">
                 </figure>
-                <p class="rating">Рейтинг:8,5</p>
+                <p class="rating">Рейтинг: 8,5</p>
               </div>          
             </li>
 
@@ -159,7 +170,7 @@
                 </figure>
                 <a class="hotel_name" href="#"><h3>Desert quail INN</h3></a>
                 <span>Мотель</span>
-                <span>от 3000р.</span>
+                <span>от 3000 р.</span>
                 <button class="button button_sorting_more" type="button">Подробнее</button>
                 <a class="button button_sorting_book" href="#">Забронировать</a>
               </div>
@@ -169,7 +180,7 @@
                   <img src="img/icons/star.svg" alt="Звезда рейтинга">
                   <img src="img/icons/star.svg" alt="Звезда рейтинга">
                 </figure>
-                <p class="rating">Рейтинг:8,9</p>
+                <p class="rating">Рейтинг: 8,9</p>
               </div>
             </li>
 
@@ -180,7 +191,7 @@
                 </figure>
                 <a class="hotel_name" href="#"><h3>Villas at poco diablo</h3></a>
                 <span>Апартаменты</span>
-                <span>от 2000р.</span>
+                <span>от 2000 р.</span>
                 <button class="button button_sorting_more" type="button">Подробнее</button>
                 <a class="button button_sorting_book" href="#">Забронировать</a>
               </div> 
@@ -189,7 +200,7 @@
                   <img src="img/icons/star.svg" alt="Звезда рейтинга">
                   <img src="img/icons/star.svg" alt="Звезда рейтинга">
                 </figure>
-                <p class="rating">Рейтинг:9,2</p>
+                <p class="rating">Рейтинг: 9,2</p>
               </div>
             </li>
           </ul>
@@ -197,21 +208,19 @@
       </main>
 
       <footer class="main_footer">
-      
         <div class="catalog_container">
-           
           <section class="footer_contacts">
             <h2 class="visually-hidden">Как нас найти?</h2>
-            <p  class="footer_contacts_visit">#VISITSEDONA <br> 
-            Тел: <a class="footer_phone" href="tel:+74956660166">+7 (495) 666-01-66</a></p>
+            <p class="footer_contacts_visit">#VISITSEDONA</p>
+
+            <p>Тел:<a class="footer_phone" href="tel:+74956660166"> +7 (495) 666-01-66</a></p>
           </section>
-         
           <section class="footer_social">
             <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="social_button_list">
               <li>
-                <a class="social_button social_item" href="#"> 
-                  <span class="visually-hidden">Твиттер</span>  
+                <a class="social_button social_item" href="#">
+                  <span class="visually-hidden">Твиттер</span>   
                   <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="social_icon" d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z"/>
                   </svg>
@@ -230,13 +239,11 @@
                   <span class="visually-hidden">YouTube</span> 
                   <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="social_icon" fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"/>
-                  </svg>
+                  </svg>  
                 </a>
               </li>
             </ul>
           </section>
-          
-          
           <div class="footer_copyright_container">
             <p class="footer_copyright">
               WEBSITE BY
