@@ -45,6 +45,7 @@
   /* shadow */
   --basic-shadow: rgba(0, 1, 1, 0.2);
   --form-shadow: rgba(0, 1, 1, 0.15);
+  --toggle-shadow: rgba(171,171,171,0.3)
 
 }
 
@@ -471,10 +472,18 @@
   text-align: center;
 }
 
+.input_quantity::-webkit-outer-spin-button,
+.input_quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .calendar_img {
-  padding: 7px 9px 8px;
+  padding: 7px 9px;
   position: absolute;
   right: 0;
+  background-color: transparent;
+  border: none;
 }
 
 .fill_icon_form {
@@ -787,10 +796,10 @@
   width: 4px;
   height: 4px;
   padding: 0;
-  border: 8px solid #ffffff;
-  background-color: #ababab;
+  border: 8px solid var(--basic-white);
+  background-color: var(--basic-range-shadow);
   border-radius: 50%;
-  box-shadow: 0 2px 0 0 rgba(171,171,171,0.3);
+  box-shadow: 0 2px 0 0 var(--toggle-shadow);
   cursor: pointer;
 }
 
@@ -801,10 +810,10 @@
   width: 5px;
   height: 5px;
   padding: 0;
-  border: 9px solid #ffffff;
-  background-color: #ababab;
+  border: 9px solid var(--basic-white);
+  background-color: var(--basic-range-shadow);
   border-radius: 50%;
-  box-shadow: 0 2px 0 0 rgba(171,171,171,0.3);
+  box-shadow: 0 2px 0 0 var(--toggle-shadow);
   cursor: pointer;
 } 
 
@@ -814,7 +823,7 @@
 
 .range_controls .scale {
   height: 2px;
-  background: rgba(255,255,255,0.3);
+  background: var(--button-opaciti);
 }
 
 .range_controls .bar {
@@ -831,44 +840,6 @@
   margin-left: 46px;
 }
 
-/*.fieldset_range p {
-  color: var(--basic-white);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-}
-
- /*.fieldset_item {
-  color: var(--basic-white);
-  outline: none;
-  background: transparent;
-  border: none;
-  width: 50px;
-  padding: 2px;
- }
-
- /*.filter_hotel_cost_border {
-  border: 2px solid var(--basic-white);
-  display: flex;
-  height: 36px;
-  margin: 10px 0 10px;
- }*/
-
- /*.filter_hotel_cost_border div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
- } */
-
- /*.filter_hotel_cost .filter_hotel_input {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
- }*/
-
- 
-
 .button_show {
   color: var(--basic-white);
   outline: none; 
@@ -883,6 +854,11 @@
   margin: 33px 85px;
   justify-content: center;
 }
+
+.button_show:hover {
+  background: var(--basic-white);
+  color: var(--basic-black);
+} 
 
 /* sorting:  */
 
@@ -906,21 +882,20 @@
 .hotel_sorting_fieldset {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   height: 86px;
 }
 
 .hotel_sorting_container {
   display: flex;
-  align-items: center;
+  padding-top: 31px;
 }
 
 .hotel_sorting_list {
  display: flex;
 }
 
-.hotel_sorting_fieldset .sorting {
-  margin: 0 40px 0 54px;
+ .sorting {
+  margin: 0 40px 0 48px;
 }
 
 .hotel_sorting li {
@@ -939,14 +914,18 @@
   color: var(--text-opaciti);
 }
 
-.hotel_item_active {
-  color: var(--basic-blue);
-  border-bottom: none;
-}
-
 .hotel_item:hover {
   border-bottom: 1px dotted var(--basic-blue);
   color: var(--basic-blue);
+}
+
+.hotel_item_active {
+  color: var(--basic-blue);
+  border-bottom: none; 
+}
+
+.hotel_item_active:hover {
+  border-bottom: none;
 }
 
 .hotel_item:active {
@@ -958,11 +937,13 @@
   display: grid;
   grid-gap: 12px;
   grid-template-columns: repeat(2, 1fr);
+  padding-top: 37px;
  } 
 
 .triangle, 
 .hotel_name,
-.button_sorting_book {
+.button_sorting_book,
+.button_sorting_more {
   text-decoration: none;
 }
 
@@ -1000,11 +981,11 @@
 .hotel_list .hotel_list_item {
   display: grid;
   grid-template-columns: 1fr auto;
-  border-top: 1px solid #E5E5E5;
+  border-top: 1px solid var(--basic-border-focus);
 }
 
 .hotel_list .hotel_list_item:last-child {
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid var(--basic-border-focus);
 }
 
  .hotel_list_container {
@@ -1034,21 +1015,16 @@
 
 /* More and book buttons */
 
-.button_sorting_more {
-  font-size: 14px;
-  line-height: 21px;
-  height: 27px;
-  padding: 3px 17px; 
-  width: 110px;
-}
-
- .hotel_name {
+.hotel_name {
   grid-column: 2/-1;
   grid-row: 1/2;
  }
 
 .button_sorting_more {
   background-color: var(--basic-blue);
+  font-size: 14px;
+  line-height: 21px;
+  padding: 3px 17px 3px; 
   grid-row: 3/4;
   grid-column: 2/3;
 }
