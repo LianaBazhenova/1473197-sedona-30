@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
@@ -35,6 +35,7 @@
                   <li>
                     <a class="activ">Гостиницы</a>
                   </li>
+
                 </ul>
               </div>
             </div>
@@ -81,11 +82,14 @@
                     <input class="selection_item visually-hidden" type="checkbox" name="apartments" id="filter_apartments" checked>
                     <label for="filter_apartments">Апартаменты</label>
                   </li>
+                  
                 </ul>
               </fieldset> 
             </div>
+            
+            <div class="filter_hotel_container filter_hotel_cost">
+            <fieldset class="cost">
 
-            <fieldset class="filter_hotel_container filter_hotel_cost">
               <legend>Стоимость в сутки (р):</legend>
         
                 <div class="range_filter">
@@ -111,6 +115,7 @@
               <button class="button_show" type="submit">Показать</button>
 
              </fieldset> 
+             </div>
 
           </form>
         </section>
@@ -124,17 +129,18 @@
                 <li><a class="hotel_item hotel_item_active" href="#">По цене</a></li>
                 <li><a class="hotel_item" href="#">По типу</a></li>
                 <li><a class="hotel_item" href="#">По рейтингу</a></li>
+
               </ul>
             </div>
             <div class="triangle_container">
               <a class="triangle" href="#">
                 <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.5 0L0 10H11L5.5 0Z" fill="var(--basic-rest-triangle)"/>
+                  <path d="M5.5 0L0 10H11L5.5 0Z"/>
                 </svg>
               </a>
-              <a class="triangle" href="#">
+              <a class="triangle triangle_activ" href="#">
                 <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.5 10L0 0H11" fill="var(--basic-blue)"/>
+                  <path d="M5.5 10L0 0H11"/>
                 </svg>
               </a>
             </div>
@@ -203,6 +209,7 @@
                 <p class="rating">Рейтинг: 9,2</p>
               </div>
             </li>
+
           </ul>
         </section>
       </main>
@@ -242,6 +249,8 @@
                   </svg>  
                 </a>
               </li>
+
+
             </ul>
           </section>
           <div class="footer_copyright_container">
