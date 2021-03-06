@@ -23,19 +23,10 @@
             <div class="main_navigation_wrapper">
               <div class="container">
                 <ul class="site_navigation">
-                  <li>
-                    <a href="#">Информация</a>
-                  </li>
-                  <li>
-                    <a href="#">Фото и видео</a>
-                  </li>
-                  <li>
-                    <a href="#">Карта штата</a>
-                  </li>
-                  <li>
-                    <a class="activ">Гостиницы</a>
-                  </li>
-
+                  <li><a class="a" href="#">Информация</a></li>
+                  <li><a href="#">Фото и видео</a></li>
+                  <li><a href="#">Карта штата</a></li>
+                  <li><a class="activ">Гостиницы</a></li>
                 </ul>
               </div>
             </div>
@@ -45,23 +36,23 @@
       <main class="container">
         <section class="filter_hotel">
           
-          <h1 class="visually-hidden">Фильтр гостиниц</h1>
+          <h1 class="visually_hidden">Фильтр гостиниц</h1>
           
-          <form class="filter_hotel_form catalog_container" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="filter_hotel_form catalog_container" method="get" action="https://echo.htmlacademy.ru/" target="_blank">
             <div class="filter_hotel_container filter_hotel_item">
               <fieldset class="infrastructure">
                 <legend>Инфраструктура:</legend>
                 <ul class="filter_hotel_list">
-                  <li> 
-                      <input class="selection_item visually-hidden" type="checkbox" name="swimming" id="filter_swimming" checked> 
+                  <li class="filter_hotel_item"> 
+                      <input class="selection_item visually_hidden" type="checkbox" name="swimming" id="filter_swimming" checked> 
                       <label for="filter_swimming">Бассейн</label>
                   </li>
-                  <li>
-                    <input class="selection_item visually-hidden" type="checkbox" name="parking" id="filter_parking"> 
+                  <li class="filter_hotel_item">
+                    <input class="selection_item visually_hidden" type="checkbox" name="parking" id="filter_parking"> 
                     <label for="filter_parking">Парковка</label>
                   </li>
-                  <li>
-                    <input class="selection_item visually-hidden" type="checkbox" name="WI_FI" id="filter_WI_FI">
+                  <li class="filter_hotel_item">
+                    <input class="selection_item visually_hidden" type="checkbox" name="WI_FI" id="filter_WI_FI">
                     <label for="filter_WI_FI">WI-FI</label>
                   </li>
                 </ul>
@@ -70,16 +61,16 @@
               <fieldset class="type_of_housing">
                 <legend>Тип жилья:</legend>
                 <ul class="filter_hotel_list">
-                  <li>
-                    <input class="selection_item visually-hidden" type="checkbox" name="hotel" id="filter_hotel" checked>
+                  <li class="filter_hotel_item">
+                    <input class="selection_item visually_hidden" type="checkbox" name="hotel" id="filter_hotel" checked>
                     <label for="filter_hotel">Гостиница</label>
                   </li>
-                  <li>
-                    <input class="selection_item visually-hidden" type="checkbox" name="motel" id="filter_motel" checked>
+                  <li class="filter_hotel_item">
+                    <input class="selection_item visually_hidden" type="checkbox" name="motel" id="filter_motel" checked>
                     <label for="filter_motel">Мотель</label>
                   </li>
-                  <li>
-                    <input class="selection_item visually-hidden" type="checkbox" name="apartments" id="filter_apartments" checked>
+                  <li class="filter_hotel_item">
+                    <input class="selection_item visually_hidden" type="checkbox" name="apartments" id="filter_apartments" checked>
                     <label for="filter_apartments">Апартаменты</label>
                   </li>
                   
@@ -110,8 +101,6 @@
                   </div>
 
                 </div>
-                
-
               <button class="button_show" type="submit">Показать</button>
 
              </fieldset> 
@@ -120,7 +109,7 @@
           </form>
         </section>
         <section class="hotel_sorting">
-          <h2 class="visually-hidden">Список гостиниц</h2>
+          <h2 class="visually_hidden">Список гостиниц</h2>
           <div class="hotel_sorting_fieldset catalog_container">
             <div class="hotel_sorting_container">
               <p class="found_paragraph">Найдено:<span> 3</span></p>
@@ -150,7 +139,7 @@
             <li class="hotel_list_item catalog_container">
               <div class="hotel_list_container">
                 <figure class="figure_img"> 
-                  <img class="hotel_img" src="img/content/amara.jpg" width="135" height="90" alt="Amara resort & SPA">
+                  <img class="hotel_img" src="img/content/amara.jpg" width="135" height="90" alt="Фото гостиницы Amara resort & SPA">
                 </figure>
                 <a class="hotel_name" href="#"><h3>Amara resort &amp; SPA</h3></a>
                 <span>Гостиница</span> 
@@ -172,7 +161,7 @@
             <li class="hotel_list_item catalog_container">
               <div class="hotel_list_container">
                 <figure class="figure_img">
-                  <img class="hotel_img" src="img/content/desert.jpg" width="135" height="90" alt="Desert quail INN">
+                  <img class="hotel_img" src="img/content/desert.jpg" width="135" height="90" alt="Фото гостиницы Desert quail INN">
                 </figure>
                 <a class="hotel_name" href="#"><h3>Desert quail INN</h3></a>
                 <span>Мотель</span>
@@ -193,7 +182,7 @@
             <li class="hotel_list_item catalog_container">
               <div class="hotel_list_container">
                 <figure class="figure_img">
-                  <img class="hotel_img" src="img/content/villas.jpg" width="135" height="90" alt="Villas at poco diablo">
+                  <img class="hotel_img" src="img/content/villas.jpg" width="135" height="90" alt="Фото гостиницы Villas at poco diablo">
                 </figure>
                 <a class="hotel_name" href="#"><h3>Villas at poco diablo</h3></a>
                 <span>Апартаменты</span>
@@ -217,17 +206,17 @@
       <footer class="main_footer">
         <div class="catalog_container">
           <section class="footer_contacts">
-            <h2 class="visually-hidden">Как нас найти?</h2>
-            <p class="footer_contacts_visit">#VISITSEDONA</p>
+            <h2 class="visually_hidden">Как нас найти?</h2>
+            <p class="footer_contacts_visit" tabindex="0">#VISITSEDONA</p>
 
             <p class="footer_contacts_phone">Тел:<a class="footer_phone" href="tel:+74956660166"> +7 (495) 666-01-66</a></p>
           </section>
           <section class="footer_social">
-            <h2 class="visually-hidden">Социальные сети</h2>
+            <h2 class="visually_hidden">Социальные сети</h2>
             <ul class="social_button_list">
               <li>
                 <a class="social_button social_item" href="#">
-                  <span class="visually-hidden">Твиттер</span>   
+                  <span class="visually_hidden">Твиттер</span>   
                   <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="social_icon" d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z"/>
                   </svg>
@@ -235,7 +224,7 @@
               </li>
               <li>
                 <a class="social_button social_item" href="#">
-                  <span class="visually-hidden">Фэйсбук</span> 
+                  <span class="visually_hidden">Фэйсбук</span> 
                   <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="social_icon" d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z"/>
                   </svg>
@@ -243,7 +232,7 @@
               </li>
               <li>
                 <a class="social_button social_item" href="#">
-                  <span class="visually-hidden">YouTube</span> 
+                  <span class="visually_hidden">YouTube</span> 
                   <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="social_icon" fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"/>
                   </svg>  
