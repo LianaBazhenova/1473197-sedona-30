@@ -227,6 +227,10 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+.features_item_img_container img {
+  background-color: var(--basic-brown);
+}
+
 .feature_number {
   padding: 25px 0 23px; 
   margin: 0;
@@ -397,7 +401,7 @@
 .map {
   height: 594px;
   width: 1200px;
-  background: var(--basic-light-neutral-background);
+  background-color: var(--basic-light-neutral-background);
 }
 
 .map_iframe {
@@ -509,11 +513,13 @@
 .input_quantity::-webkit-outer-spin-button,
 .input_quantity::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
 .input_quantity[type='number'] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .calendar_img {
@@ -727,7 +733,6 @@
 
 .filter_hotel_list label {
   position: relative;
-  /*display: inline-block;*/
   cursor: pointer;
   user-select: none;
   margin-left: 40px;
@@ -768,9 +773,6 @@
 
 .filter_hotel {
   width: 1200px;
-  background: url("../img/background_blur.jpg") no-repeat center;
-  background-color: var(--basic-blue-neutral);
-  height: auto;
 }
 
 .filter_hotel li {
@@ -781,6 +783,10 @@
 .filter_hotel_form {
   display: grid;
   grid-template-columns: 1fr auto;
+  background: url("../img/background_blur.jpg") no-repeat center;
+  background-color: var(--basic-blue-neutral);
+  background-size: cover;
+  min-height: 217px;
 }
 
 .filter_hotel_item {
@@ -813,7 +819,7 @@
   display: flex;
   height: 32px;
   width: 313px;
-  margin: 10px 0 20px 0;
+  margin: 12px 0 20px 0;
   display: flex;
   align-items: center;
   position: relative;
@@ -830,16 +836,19 @@
   background: transparent;
   border: none;
   width: 55px;
+  padding: 0;
 }
 
 .price_controls input::-webkit-outer-spin-button,
 .price_controls input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 } 
 
 .price_controls input[type='number'] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .price_controls::after {
@@ -901,7 +910,7 @@
 }
 
 .price_controls .min_price {
-  margin-left: 65px;
+  margin-left: 64px;
 }
 
 .price_controls .max_price {
@@ -952,7 +961,7 @@
   display: flex;
   justify-content: space-between;
   height: auto;
-  padding-bottom: 32px;
+  padding-bottom: 30px;
 }
 
 .hotel_sorting_container {
@@ -1006,7 +1015,7 @@
   border-bottom: none;
 }
 
- .hotel_item_active:link {
+.hotel_item_active:link {
   color: var(--basic-blue);
 }
 
@@ -1097,7 +1106,7 @@
  }
 
  .hotel_img {
-  background: var(--basic-range-shadow);
+  background-color: var(--basic-range-shadow);
   object-fit: contain;
  }
 
@@ -1160,13 +1169,13 @@
 .rating_stars .stars { 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 5px;
-  margin: 0 0 45px 0;
+  grid-gap: 6px;
+  margin: 0 0 47px 0;
   transform: scale(-1, 1);
  }
 
 .rating_stars  {
-  margin-top: 30px;
+  margin-top: 28px;
   margin-bottom: 24px;
   width: 110px;
   justify-self: end;

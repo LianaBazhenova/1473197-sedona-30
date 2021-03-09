@@ -5,7 +5,7 @@
     <title>Гостиница Седона</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
@@ -121,12 +121,12 @@
           <p class="interest">Заинтересовались?</p>
           <p class="search_info">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 
-          <a class="button button_primary button_search">Поиск гостиницы в Седоне</a>
+          <button class="button button_primary button_search" type="button">Поиск гостиницы в Седоне</button>
           <div class="form_container">
             <form class="search_form" method="post" action="https://echo.htmlacademy.ru/" target="_blank">
             
               <div class="search_container">
-               
+                 
                   <label for="arrival">Дата заезда:</label> 
                   <div class="search_item_container search_item_container_row_1">
                     <label class="visually_hidden" for="arrival">Дата заезда</label>
@@ -150,6 +150,7 @@
                       </svg>
                     </button>
                   </div> 
+
                
                   <label class="adults" for="adults">Взрослые:</label>
                   <div class="container_adults">
