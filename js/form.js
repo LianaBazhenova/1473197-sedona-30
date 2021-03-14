@@ -12,11 +12,10 @@ const mapIframe = document.querySelector(".map_iframe");
 let isStorageSupport = true;
 let storage = {};
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   mapImg.classList.add("map_hidden");
   mapIframe.classList.remove("map_hidden");
+  searchForm.classList.add("form_hide");
 });
 
 try {
@@ -35,7 +34,8 @@ let getStorage = function (arg){
 
 searchLink.addEventListener("click", function (evt) {
    evt.preventDefault();
-   searchForm.classList.toggle("form_show");
+   searchForm.classList.toggle("form_hide");
+   searchForm.classList.add("form_animation");
    formContainer.classList.remove("form_error");
     if (storage) {
       inputDate1.value = storage.date_of_arrival;

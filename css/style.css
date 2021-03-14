@@ -366,9 +366,7 @@
 /* search_form */
 
 .search_form {
-  visibility: hidden;
-  opacity: 0;
-  top: -395px;
+  top: 0;
   width: 568px;
   height: 395px;
   margin: auto;
@@ -377,14 +375,17 @@
   background-color: var(--basic-white);
   left: 50%;
   transform: translateX(-50%);
-  transition: 0.8s all;
   z-index: 0;
 }
 
-.form_show {
-  visibility: visible;
-  opacity: 1;
-  top: 0;
+.form_hide {
+  visibility: hidden;
+  opacity: 0;
+  top: -365px;
+}
+
+.form_animation{
+  transition: 0.8s all;
 }
 
 .form_error {
